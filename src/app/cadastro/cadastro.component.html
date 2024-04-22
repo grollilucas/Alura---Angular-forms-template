@@ -2,7 +2,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <h2 class="principal__titulo">Dados do cadastro</h2>
 
-  <form class="principal__formulario" id="formulario" #f="ngForm" (ngSubmit)="cadastrar(f)">
+  <form class="principal__formulario" id="formulario" #formularioReference="ngForm" (ngSubmit)="cadastrar(formularioReference)">
     <h3 class="principal__subtitulo"> Dados pessoais </h3>
     <span style="color: red; font-size: 15px;">*Preenchimento obrigatório</span>
 
@@ -12,10 +12,10 @@
       <input name="nome" id="nome" class="campo__escrita" ngModel required minlength="2" #nome="ngModel" />
 
       <div *ngIf="nome?.invalid && nome?.touched || nome?.dirty">
-        <app-mensagem *ngIf="f.controls['nome']?.errors?.['required']" mensagem="- O campo de nome deve ser
+        <app-mensagem *ngIf="formularioReference.controls['nome']?.errors?.['required']" mensagem="- O campo de nome deve ser
           preenchido"></app-mensagem>
 
-        <app-mensagem *ngIf="f.controls['nome']?.errors?.['minlength']" mensagem="- O nome deve ter no mínimo 2
+        <app-mensagem *ngIf="formularioReference.controls['nome']?.errors?.['minlength']" mensagem="- O nome deve ter no mínimo 2
         caracteres"></app-mensagem>
 
       </div>
@@ -86,7 +86,7 @@
     <div class="formulario__campo">
       <label class="campo__etiqueta" for="cep">CEP <span style="color: red">*</span></label>
       <input name="cep" id="cep" class="campo__escrita" ngModel required #cep="ngModel" pattern="^(\d{5})(-?\d{3})$"
-        minlength="8" maxlength="8" (blur)="consultaCEP($event, f)" />
+        minlength="8" maxlength="8" (blur)="consultaCEP($event, formularioReference)" placeholder="_____-___" />
 
       <div *ngIf="cep?.invalid && cep?.touched || cep?.dirty">
         <app-mensagem *ngIf="cep?.errors?.['required']" mensagem="O campo CEP é obrigatório"> </app-mensagem>

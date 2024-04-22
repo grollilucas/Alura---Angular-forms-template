@@ -44,14 +44,20 @@
 
 .formulario__botao {
   background: var(--laranja);
-  padding: 1em 4em;
+  padding: 1em 2em;
   font-weight: 700;
   font-size: 20px;
-  line-height: 30px;
-  border: none;
+  border: 5px, solid black;
   color: var(--branco);
   cursor: pointer;
-  float: right;
+  margin-top: 15px;
+  border-radius: 20px;
+  
+}
+
+.botao{
+  margin: auto;
+  width: 50%;
 }
 
 .formulario__erro {

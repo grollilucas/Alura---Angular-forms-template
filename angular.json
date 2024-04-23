@@ -102,5 +102,8 @@
       }
     }
   },
-  "defaultProject": "forms-reativos"
+  "defaultProject": "forms-reativos",
+  "cli": {
+    "analytics": "6b620584-e021-4d12-a752-35f81626760a"
+  }
 }

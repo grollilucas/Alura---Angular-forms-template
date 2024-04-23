@@ -10,9 +10,10 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { SucessoCadastroComponent } from './sucesso-cadastro/sucesso-cadastro.component';
 import { MensagemComponent } from './components/mensagem/mensagem.component';
 import { MaioridadeDirective } from './directives/maioridade.directive';
+import { ValidandoCepDirective } from './directives/validando-cep.directive';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, CadastroComponent, SucessoCadastroComponent, MensagemComponent, MaioridadeDirective],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, CadastroComponent, SucessoCadastroComponent, MensagemComponent, MaioridadeDirective, ValidandoCepDirective],
   imports: [
     BrowserModule, 
     AppRoutingModule,

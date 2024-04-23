@@ -98,13 +98,13 @@
         minlength="8" 
         maxlength="8" 
         (blur)="consultaCEP($event, formularioReference)" 
-        validatorCep
+        validadorCep
          />
 
       <div *ngIf="cep?.invalid && cep?.touched || cep?.dirty">
         <app-mensagem *ngIf="cep?.errors?.['required']" mensagem="O campo CEP é obrigatório"> </app-mensagem>
         <app-mensagem *ngIf="cep?.errors?.['pattern']" mensagem="O campo CEP deve seguir o padrão: 12345-678"></app-mensagem>
-        <app-mensagem *ngIf="cep?.errors?.['validatorCep']" mensagem="O CEP informado não existe"></app-mensagem>
+        <app-mensagem *ngIf="cep?.errors?.['validadorCep']" mensagem="O CEP informado não existe"></app-mensagem>
       </div>
 
      
